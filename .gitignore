@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+dist/
+build/
+*.egg-info/
+*.zip
+*.tar.gz
+.env
+.venv/
+.DS_Store
+*.log
+SCORES*.json

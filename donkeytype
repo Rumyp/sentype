@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Development wrapper — runs the local game.py in this repository
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+python3 "$DIR/game.py" "$@"
