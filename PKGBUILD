@@ -6,8 +6,9 @@ pkgdesc="DonkeyType — simple terminal typing game"
 arch=('any')
 url="https://example.com/donkeytype"
 license=('MIT')
-dependencies=(python)
-source=()
+depends=('python')
+source=("donkeytype-${pkgver}.tar.gz")
+sha256sums=('2d84f24c73f7b8997c42f0cd453a8501ff56173520a29fffdabec247ce36eeae')
 
 build() {
   :
