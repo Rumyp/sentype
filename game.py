@@ -11,12 +11,12 @@ New: --difficulty / -d with easy, medium, hard pools.
 """
 
 BANNER = """
-   _____          ______         
-  / ___/___  ____/_  __/_  ______
-  \\__ \\/ _ \\/ __ \\/ / / / / / __ 
- ___/ /  __/ / / / / / /_/ / /_/ 
-/____/\\___/_/ /_/_/  \\__, / .___/
-                     /____/_/     
+   _____          ______               
+  / ___/___  ____/_  __/_  ______  ___ 
+  \\__ \\/ _ \\/ __ \\/ / / / / / __ \\/ _ \\
+ ___/ /  __/ / / / / / /_/ / /_/ /  __/
+/____/\\___/_/ /_/_/  \\__, / .___/\\___/ 
+                    /____/_/           
           Terminal Typing Practice Game
 """
 
@@ -36,10 +36,14 @@ def load_lines(path):
 
 
 def countdown(n=3):
-    for i in range(n, 0, -1):
-        print(f"Starting in {i}...", end="\r", flush=True)
-        time.sleep(1)
-    print(" "*40, end="\r")
+    try:
+        for i in range(n, 0, -1):
+            print(f"Starting in {i}...", end="\r", flush=True)
+            time.sleep(1)
+        print(" "*40, end="\r")
+    except KeyboardInterrupt:
+        print("\nInterrupted during countdown.")
+        sys.exit(0)
 
 
 def show_diff(target, typed):
@@ -185,7 +189,7 @@ def update_high_scores(mode_key, wpm):
 
 def main():
     print(BANNER)
-    parser = argparse.ArgumentParser(description="SenType — typing game (sentence mode)")
+    parser = argparse.ArgumentParser(description="SenType — typing game (sentence mode)", prog="sentype")
     parser.add_argument('--mode', choices=['sentences', 'words'], default='sentences', help='Mode: sentences (default) or words')
     parser.add_argument('-s', '--sentences', type=int, default=5, help='Number of sentences for sentence mode (default 5)')
     parser.add_argument('-w', '--words', type=int, default=10, help='Number of words for word mode (default 10)')
