@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DonkeyType — terminal typing game (sentence mode) with difficulty levels
+SenType — terminal typing game (sentence mode) with difficulty levels v0.2.0
 Usage examples:
   python3 game.py                 # sentence mode (default), 5 sentences, medium difficulty
   python3 game.py -s 10 -d easy    # 10 easy sentences
@@ -8,6 +8,16 @@ Usage examples:
   python3 game.py --mode words -w 20  # legacy word mode
 
 New: --difficulty / -d with easy, medium, hard pools.
+"""
+
+BANNER = """
+   _____          ______         
+  / ___/___  ____/_  __/_  ______
+  \\__ \\/ _ \\/ __ \\/ / / / / / __ 
+ ___/ /  __/ / / / / / /_/ / /_/ 
+/____/\\___/_/ /_/_/  \\__, / .___/
+                     /____/_/     
+          Terminal Typing Practice Game
 """
 
 import argparse
@@ -174,7 +184,8 @@ def update_high_scores(mode_key, wpm):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="DonkeyType — typing game (sentence mode)")
+    print(BANNER)
+    parser = argparse.ArgumentParser(description="SenType — typing game (sentence mode)")
     parser.add_argument('--mode', choices=['sentences', 'words'], default='sentences', help='Mode: sentences (default) or words')
     parser.add_argument('-s', '--sentences', type=int, default=5, help='Number of sentences for sentence mode (default 5)')
     parser.add_argument('-w', '--words', type=int, default=10, help='Number of words for word mode (default 10)')
