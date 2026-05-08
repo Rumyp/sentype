@@ -6,15 +6,15 @@ arch=('any')
 url="https://github.com/rumyp/sentype"
 license=('MIT')
 depends=('python')
-source=("https://github.com/rumyp/donkeytype/releases/download/${pkgver}/donkeytype-${pkgver}.tar.gz")
-sha256sums=('d32e0fcdacf87c10c76303a924b4d266b320435342ae2d1199412153f7134df4')
+source=("https://github.com/rumyp/sentype/releases/download/${pkgver}/sentype-${pkgver}.tar.gz")
+sha256sums=('74dfa5c803a84acfa55a69d8188d6b8dbb1387c3373c2de59a4599941571c8a8')
 
 build() { :; }
 
 package() {
   install -d "$pkgdir/usr/share/sentype"
-  if [ -d "$srcdir/donkeytype-${pkgver}" ]; then
-    cp -r "$srcdir/donkeytype-${pkgver}/"* "$pkgdir/usr/share/sentype/"
+  if [ -d "$srcdir/sentype-${pkgver}" ]; then
+    cp -r "$srcdir/sentype-${pkgver}/"* "$pkgdir/usr/share/sentype/"
   else
     cp -r "$srcdir"/* "$pkgdir/usr/share/sentype/"
   fi
