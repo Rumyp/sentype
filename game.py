@@ -47,10 +47,8 @@ def countdown(n=3):
 
 
 def show_diff(target, typed):
-    # Print target and typed and an indicator line showing mismatches
     print('\nTarget: ' + target)
     print('Typed : ' + typed)
-    # build indicator
     indicator = []
     for i in range(max(len(target), len(typed))):
         a = typed[i] if i < len(typed) else None
@@ -84,9 +82,7 @@ def run_sentence_mode(sentences, count, timed):
                 typed = input('Type: ')
                 sentences_done += 1
                 total_chars += len(typed)
-                for a, b in zip(typed, target):
-                    if a == b:
-                        correct_chars += 1
+                correct_chars += sum(1 for a, b in zip(typed, target) if a == b)
                 show_diff(target, typed)
         else:
             for idx, target in enumerate(chosen, 1):
@@ -94,9 +90,7 @@ def run_sentence_mode(sentences, count, timed):
                 typed = input('Type: ')
                 sentences_done += 1
                 total_chars += len(typed)
-                for a, b in zip(typed, target):
-                    if a == b:
-                        correct_chars += 1
+                correct_chars += sum(1 for a, b in zip(typed, target) if a == b)
                 show_diff(target, typed)
     except KeyboardInterrupt:
         print('\nInterrupted.')
@@ -128,18 +122,14 @@ def run_word_mode(words, n, timed):
                 typed = input('Type: ')
                 words_done += 1
                 total_chars += len(typed)
-                for a, b in zip(typed, w):
-                    if a == b:
-                        correct_chars += 1
+                correct_chars += sum(1 for a, b in zip(typed, w) if a == b)
         else:
             for idx, w in enumerate(chosen, 1):
                 print(f"\nWord {idx}/{len(chosen)}: {w}")
                 typed = input('Type: ')
                 words_done += 1
                 total_chars += len(typed)
-                for a, b in zip(typed, w):
-                    if a == b:
-                        correct_chars += 1
+                correct_chars += sum(1 for a, b in zip(typed, w) if a == b)
     except KeyboardInterrupt:
         print('\nInterrupted.')
 
@@ -219,7 +209,6 @@ def main():
         elapsed, total_chars, correct_chars, done = run_word_mode(lines, args.words, args.timed)
 
     wpm = print_stats(elapsed, total_chars, correct_chars, done)
-    # include difficulty in score key for sentences
     if args.mode == 'sentences':
         mode_key = f"sentences:{args.difficulty}: {'timed' if args.timed>0 else 'count'}:{args.timed if args.timed>0 else args.sentences}"
     else:
