@@ -7,8 +7,14 @@ build/
 *.egg-info/
 *.zip
 *.tar.gz
+*.exe
+*.build/
+*.dist/
+*.onefile-build/
 .env
 .venv/
+.venv*/
 .DS_Store
 *.log
+nuitka-crash-report.xml
 SCORES*.json

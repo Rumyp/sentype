@@ -1,23 +1,46 @@
-DonkeyType — enhanced
+# SenType
 
-Now defaults to sentence mode (better for realistic typing practice).
+SenType is a simple terminal typing practice game for sentence and word drills.
 
-Usage:
-  python3 game.py                 # sentence mode, 5 sentences (medium)
-  python3 game.py -s 10 -d easy   # 10 easy sentences
-  python3 game.py -s 10 -d hard   # 10 hard sentences
-  python3 game.py -t 60 -d medium # timed mode (60 seconds)
-  python3 game.py --mode words -w 20  # legacy word mode
-  python3 game.py -f /path/to/file.txt  # use custom sentence/word list
+## Features
 
-New features:
-- Sentence pools by difficulty: sentences_easy.txt, sentences_medium.txt, sentences_hard.txt
-- Difficulty flag (-d, --difficulty)
-- Per-sentence feedback and mismatch indicator
-- 3-second countdown before starting
-- Timed or fixed-count sessions
-- High scores stored in ~/.donkeytype_scores.json
+- Sentence mode by default
+- Easy, medium, and hard sentence pools
+- Optional word mode
+- Fixed-count or timed sessions
+- Per-sentence mismatch indicators
+- WPM, accuracy, and high-score tracking
 
-Notes:
-- Sentences files are in the game folder. Each file contains one sentence per line.
-- Use -f to point at a custom file if desired.
+## Usage
+
+```sh
+python3 game.py
+python3 game.py -s 10 -d easy
+python3 game.py -s 10 -d hard
+python3 game.py -t 60 -d medium
+python3 game.py --mode words -w 20
+python3 game.py -f /path/to/file.txt
+```
+
+Installed packages provide the `sentype` command:
+
+```sh
+sentype
+sentype --version
+sentype -s 10 -d hard
+```
+
+High scores are stored in `~/.sentype_scores.json`.
+
+## Windows Build
+
+The recommended Windows release asset is a Nuitka one-file executable. Build it
+on Windows with Python 3.12:
+
+```powershell
+.\build-windows.ps1
+```
+
+## License
+
+MIT

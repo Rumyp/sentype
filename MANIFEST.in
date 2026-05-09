@@ -1,5 +1,8 @@
-include *.txt
 include README.md
-include PKGBUILD
+include LICENSE
+include *.txt
 include install.sh
-recursive-include . *
+include build-windows.ps1
+include requirements-build.txt
+include sentype
+include donkeytype

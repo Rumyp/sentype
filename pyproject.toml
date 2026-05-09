@@ -1,3 +1,32 @@
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentype"
+version = "0.2.1"
+description = "Simple terminal typing practice game"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "Rumyp" }]
+keywords = ["typing", "terminal", "cli", "practice"]
+classifiers = [
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.scripts]
+sentype = "game:main"
+
+[tool.setuptools]
+py-modules = ["game"]
+
+[tool.setuptools.data-files]
+"share/sentype" = [
+  "sentences_easy.txt",
+  "sentences_medium.txt",
+  "sentences_hard.txt",
+  "words.txt",
+]
