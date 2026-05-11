@@ -32,15 +32,6 @@ sentype -s 10 -d hard
 
 High scores are stored in `~/.sentype_scores.json`.
 
-## Windows Build
-
-The recommended Windows release asset is a Nuitka one-file executable. Build it
-on Windows with Python 3.12:
-
-```powershell
-.\build-windows.ps1
-```
-
 ## License
 
 MIT
