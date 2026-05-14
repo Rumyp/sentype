@@ -1,4 +1,14 @@
-# SenType
+# Sentype
+
+
+![sentype](https://img.shields.io/badge/sentype-terminal%20typing%20game-000000?style=for-the-badge&logo=windowsterminal&logoColor=00ff00)
+![python](https://img.shields.io/badge/python-3.11+-000000?style=for-the-badge&logo=python&logoColor=00ff00)
+![license](https://img.shields.io/github/license/rumyp/sentype?style=for-the-badge&color=000000&logoColor=00ff00)
+![stars](https://img.shields.io/github/stars/rumyp/sentype?style=for-the-badge&color=000000&logoColor=00ff00)
+![linux](https://img.shields.io/badge/Linux-AUR-000000?style=for-the-badge&logo=linux&logoColor=00ff00)
+![windows](https://img.shields.io/badge/Windows-winget-000000?style=for-the-badge&logo=windows&logoColor=00ff00)
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&pause=1000&color=00FF00&center=true&vCenter=true&width=600&lines=terminal+typing+game...;yay+-S+sentype;winget+install+sentype" >
+
 
 SenType is a simple terminal typing practice game for sentence and word drills.
 
