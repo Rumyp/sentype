@@ -1,5 +1,7 @@
 # Sentype
-
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00ff00&height=180&section=header&text=sentype&fontColor=00ff00&font=JetBrains+Mono&fontSize=60&animation=fadeIn" />
+</p>
 
 ![sentype](https://img.shields.io/badge/sentype-terminal%20typing%20game-000000?style=for-the-badge&logo=windowsterminal&logoColor=00ff00)
 ![python](https://img.shields.io/badge/python-3.11+-000000?style=for-the-badge&logo=python&logoColor=00ff00)
