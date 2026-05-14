@@ -12,9 +12,9 @@ SenType is a simple terminal typing practice game for sentence and word drills.
 - WPM, accuracy, and high-score tracking
 
 
-#installation 
+# installation 
 
-##windows
+## windows
 ```sh
 winget install sentype
 ```
@@ -22,7 +22,7 @@ or
 ```sh
 winget install --id=Rumyp.Sentype -e
 ```
-##Arch linux
+## Arch linux
 ```sh
 yay -S sentype
 ```
